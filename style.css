@@ -1,0 +1,131 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+/* Resetting default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Styling for the body Background */
+body{
+    background-image: url('./images/tac.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/* Styling for the navigation bar */
+nav {
+    background-color: rgb(108 108 108);
+    color: white;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    font-size: 27px;
+    padding: 0 12px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Removing default list styles for the navigation menu */
+nav ul {
+    list-style-type: none;
+}
+
+/* Styling for the game container */
+.gamecontainer {
+    /* background-color: rgb(255, 255, 255); */
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* Styling for the grid container */
+.container {
+    display: grid !important;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Styling for individual boxes */
+.box {
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hover effect for boxes */
+.box:hover {
+    background-color: rgba(174, 124, 124, 0.579);
+}
+
+/* Styling for game information */
+.gameinfo {
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 34px;
+}
+
+.gameinfo div{
+    display: grid;
+}
+
+.info{
+    margin-top: 19px;
+    font-size: 23px;
+}
+
+/* Reset button styles */
+#reset {
+    margin-top: 21px;
+    background-color: antiquewhite;
+    width: 85px;
+    height: 31px;
+    border-radius: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+}
+
+/* Media query for screens up to 800px wide */
+@media screen and (max-width: 800px) {
+    .gamecontainer {
+        flex-wrap: wrap;
+    }
+
+    .gameinfo {
+        margin-top: 34px;
+    }
+
+    .gameinfo h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+    }
+}
+
+/* Border removal utility classes */
+.bt { border-top: none; }
+.bd { border-bottom: none; }
+.bl { border-left: none; }
+.br { border-right: none; }
+
+/* Styling for the footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(108 108 108);
+    height: 65px;
+    color: white;
+    font-family:  'Quicksand', sans-serif;
+    align-items: center;
+    font-size: 27px;
+    display: flex;
+}
